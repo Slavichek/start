@@ -1,0 +1,38 @@
+@import "./base/mixins",
+		"./base/functions",
+		"./base/variables";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $headings-color;
+	font-family: $headings-font-family;
+	font-weight: $headings_font_weight;
+
+}
+
+h1 {
+	@include em-font-size(50);
+	line-height: (66 / 50);
+	
+}
+h2 {
+	@include em-font-size(36);
+	line-height: (48 / 36);
+}
+h3 {
+	@include em-font-size(16);
+	line-height: (26 / 16);
+}
+p {
+	@include em-font-size(16);
+	line-height: (26 / 16);
+}
+p + p {
+	margin-top: rem-calc(15);
+}
+
+

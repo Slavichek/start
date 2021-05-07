@@ -1,0 +1,25 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.section {
+	&-hero {
+		padding: rem-calc(332 0 380);
+		background: url("../assets/images/bg/bg_hero.png") bottom right no-repeat;
+		background-size: contain;
+		@include max-screen(1200px) {
+			padding: rem-calc(200 0);
+		}
+		@include max-screen($desktop) {
+			padding: rem-calc(150 0);
+		}
+	}
+}

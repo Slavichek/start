@@ -1,0 +1,111 @@
+form,
+fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'],
+input[type='date'],
+textarea {
+	border-radius: 0;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'],
+input[type='date'],
+textarea,
+select {
+	padding: $input_padding;
+	font-size: $input_font_size;
+	line-height: $input_line_height;
+	font-family: $input_font_family;
+	box-sizing: border-box;
+	border: $input_border;
+	border-radius: $input_border_radius;
+
+	&:not(textarea) {
+		height: $input_height;
+	}
+
+	&:focus {
+		outline: none;
+		border-color: $input_focus_border_color;
+	}
+
+	@include placeholder {
+		color: $placeholder_color;
+	}
+}
+
+select {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+	@extend .btn;
+	@include animate(color background border opacity box-shadow, $animation_speed, linear);
+		height: $submit_height;
+		padding: $submit_padding !important;
+		font-size: $submit_font_size;
+		line-height: $submit_height !important;
+		color: $submit_color;
+		outline: none;
+		cursor: pointer;
+		border: $submit_border;
+		border-radius: $input_border_radius;
+		background: $submit_background;
+
+	&:hover,
+	&:focus {
+		background: $submit_hover_background;
+		color: $submit_hover_color;
+	}
+}
+	
+[type="search"],
+[type="text"] {
+	background: $gray;
+	border: 1px solid $gray;
+	border-radius: $base_radius;
+	font-size: 15px;
+	font-weight: $medium;
+	float: left;
+	height: 39px;
+	padding: 9px 45px 9px 18px;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+}
+[type="submit"] {
+    font-size: 0 !important;
+    line-height: 0 !important;
+    background-size: 18px 18px !important;
+    float: right;
+    position: relative;
+    z-index: 2;
+    margin: 0 0 0 -100% !important;
+    padding: 0 !important;
+    border: none;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+		background-color: transparent;
+		opacity: 0.75;
+    }
+}

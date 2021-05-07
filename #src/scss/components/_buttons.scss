@@ -1,0 +1,90 @@
+.btn {
+	@include animate(all, $animation_speed, linear);
+	border-radius: $btn_border_radius;
+	border: $btn_border;
+	padding: $btn_padding;
+	display: inline-block;
+	font-size: $btn_font_size;
+	font-weight: $btn_font_weight;
+	line-height: $btn_line_height;
+	text-align: center;
+	vertical-align: top;
+	white-space: nowrap;
+	@include max-screen($mobile) {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	&-primary {
+		@include button-color(
+			$btn_background_primary,
+			$btn_color_primary,
+			$btn_border_primary,
+			$btn_hover_background_primary,
+			$btn_hover_border_primary,
+			$btn_hover_color_primary);
+		&:active {
+			background: $btn_active_background_primary;
+			border-color: $btn_active_border_primary;
+			color: $btn_active_color_primary;
+		}
+	}
+	&-transparent {
+		@include button-color(
+			$btn_background_transparent,
+			$btn_color_transparent,
+			$btn_border_transparent,
+			$btn_hover_background_transparent,
+			$btn_hover_border_transparent,
+			$btn_hover_color_transparent);
+		&:active {
+			background: $btn_active_background_primary;
+			border-color: $btn_active_border_primary;
+			color: $btn_active_color_primary;
+		}
+	}
+	&-lg {
+		border-radius: $btn_border_radius_lg;
+		padding: $btn_padding_lg;
+	}
+	&-sm {
+		font-size: 12px;
+		padding: $btn_padding_sm;
+	}
+	&-sm {
+		font-size: 12px;
+		padding: $btn_padding_sm;
+	}
+	&-l {
+		font-size: 12px;
+		padding: $btn_padding_smallest;
+	}
+}
+
+a {
+	@include animate(all, $animation_speed, linear);
+	color: $base_link_color;
+	text-decoration: $text_decoration;
+	font-weight: $normal;
+	font-size: 14px;
+
+	&:hover	{
+		color: $base_link_hover_color;
+		text-decoration: $text_decoration_hover;
+	}
+	&:active	{
+		color: $base_link_active_color;
+		text-decoration: $text_decoration_hover;
+	}
+	
+}
+.btn-box {
+	.btn {
+		min-width: 195px;
+	}
+	.btn + .btn {
+		margin-left: 30px;
+		@include max-screen($mobile) {
+			margin-left: 0;
+		}
+	}
+}

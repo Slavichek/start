@@ -1,0 +1,62 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.footer {
+	&__wrapper {
+		padding:  rem-calc(55 0 40);
+		background: #E7ECFF;
+		color: #939EA4;
+		.navigation {
+			&__link {
+				color: #929ECC;
+			}
+		}
+	}
+	&__logo {
+		padding:  rem-calc(55 0 40);
+		color: $nav_link_logo;
+		font-weight: $super; 
+	}
+	&__top {
+		@include display-flex;
+		@include justify-content(space-between);
+		@include align-items(center);
+		border-bottom: 2px solid #CDD1D4;
+		padding-bottom: rem-calc(40);
+		@include max-screen($mobile) {
+			@include flex-direction(column)
+		}
+	}
+	&__bottom {
+		@include display-flex;
+		@include justify-content(space-between);
+		@include align-items(center);
+		padding-top: rem-calc(40);
+		@include max-screen($mobile) {
+			@include flex-direction(column)
+		}
+	}
+}
+.social {
+	&__list {
+		display: flex;
+		@include max-screen($mobile) {
+			margin-top: rem-calc(30);
+		}
+	}
+	&__item:not(:last-child) {
+		margin-right: 15px;
+	}
+	&__link {
+		color: #B0B8BC;
+	}
+}

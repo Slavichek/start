@@ -1,0 +1,162 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"),
+            url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+/// Animate css properties
+// usage
+// scss - @include animate(color);
+//     or @include animate(color width);
+//     or @include animate(color width, 1s, linear);
+//
+
+$animation-speed: 0.25s !default;
+
+@mixin animate($properties, $duration: $animation_speed, $easing: linear) {
+  $list: ();
+  @each $prop in $properties {
+    $str: #{$prop} #{$duration} #{$easing};
+    $list: join($list, #{$str}, comma);
+  }
+  transition: $list;
+}
+
+
+/// Mixin for styling form-placeholders
+/// @example scss - Usage
+///   @include placeholder {
+///    color: #333;
+///   }
+///
+///   input[type='text'],
+///   input[type='tel'],
+///   input[type='email'] {
+///     @include placeholder {
+///      color: red;
+///     }
+///   }
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &.placeholder {
+    @content;
+  }
+}
+
+/// Font-size px to em calc
+/// @example scss - Usage
+/// selector {
+///    @include rem-font-size(16);
+/// }
+
+@mixin em-font-size($px-size) {
+  font-size: ($px-size / 16) + em;
+}
+
+// Button color
+@mixin button-color(
+	$btn_background,
+	$btn_color,
+	$btn_border,
+	$btn_hover_background,
+	$btn_hover_border,
+	$btn_hover_color) {
+	background: $btn-background;
+	color: $btn-color;
+	border-color: $btn-border;
+
+	&:hover,
+	&:focus {
+		background-color: $btn_hover_background;
+		color: $btn_hover_color;
+		border-color: $btn_hover_border;
+		outline: none;
+	}
+}
+
+// aligning center absolute block
+@mixin center-vh {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin center-h {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin center-v {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// for absolute position block
+@mixin absolute($top: 0, $bottom: 0, $left: 0, $right: 0) {
+	position: absolute;
+	top: $top;
+	bottom: $bottom;
+	left: $left;
+	right: $right;
+}
+
+@mixin display-flex {
+    display: flex;
+}
+
+@mixin flex-direction($direction) {
+    flex-direction: $direction;
+}
+
+@mixin flex-wrap($value) {
+    flex-wrap: $value;
+}
+
+@mixin align-items($align) {
+    align-items: $align;
+}
+
+@mixin justify-content($justify) {
+    justify-content: $justify;
+}
+
+@mixin vertical-centered-content {
+    @include display-flex;
+    @include flex-direction(column);
+    justify-content: center;
+}
+
+@mixin row-centered-content {
+	@include display-flex;
+    @include flex-direction(row);
+    @include align-items(center);
+    justify-content: flex-start;
+}
+
+
+

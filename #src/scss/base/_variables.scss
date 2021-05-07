@@ -1,0 +1,173 @@
+$white:    #fff;
+$black:    #000;
+$blue:     #003a6f;
+$gray:     gray;
+$yellow:   yellow;
+$orange:   #FF7237;
+$red:      #EB5757;
+$green:    #05B202;
+
+// THEMES COLORS
+$primary:       $blue;
+$warning:       $orange;
+$success:       $green;
+$danger:        $red;
+
+//TEXT-color
+$main_txt_color:          #6F7CB2;
+$light_txt_color:         #3C3C3C;
+$dark_txt_color:          #505F98;
+$grey_txt_color:         #5D6970;
+$main_title_color:        #091133;  
+
+$secondary_title_color:   $black;     
+
+// fonts name
+$base_font:             'Roboto', sans_serif, 'Helvetica';
+// $secondary_font:        'Open Sans', sans_serif, 'Helvetica';
+
+// font weight
+$thin:                        100;
+$light:                       300;
+$normal:                      400;
+$medium:                      500;
+$semibold:                    600;
+$bold:                        700;
+$extra:                       800;
+$super:                       900;
+
+// Body
+$base_text_color:             $main_txt_color;
+$base_background_body:        $white;
+$base_background_footer:      $primary;
+$font_size_base:              16px; 
+$line_height_base:            1.6; 
+$base_font_family:            $base_font;
+$base_min_width:              320px;
+
+$font_size_lg:                20px;
+$line_height_lg:              1.4736842;
+$base_radius:                 5px;
+$rem_base:                    16px;
+
+$base_container_padding:                0 15px;
+
+
+// Links
+$nav_link_color:                    #505F98;
+$nav_link_hover_color:              #37447E;
+$nav_link_logo:                     #37447E;
+
+$subnav_link_color:                 $black;
+$subnav_link_hover_color:           $black;
+
+$base_link_color:                   #505F98;
+$base_link_hover_color:             $black;
+$base_link_active_color:            $black;
+$text_decoration:                   none;
+$text_decoration_hover:             none;
+
+
+
+// headings style
+$headings_font_family:              $base_font;
+$headings_font_weight:              $medium;
+$headings_color:                    $main_title_color;
+
+
+//BUTTONS 
+// $btn_hover: #EB3C3C;
+// $btn_active: #FF8383;
+
+// Buttons
+// btn default
+
+$btn_padding:                       9px 38px;
+$btn_padding_lg:                    10px 40px;
+$btn_padding_sm:                    6px 52px;
+$btn_padding_smallest:              6px 16px;
+$btn_font_size:                     16px;
+$btn_font_weight:                   $medium;
+$btn_line_height:                   $btn_font_size + 2;
+
+//btn-border
+
+$btn_border_radius:                 5px;
+$btn_border_radius_sm:              2px;
+$btn_border_radius_lg:              5px;
+$btn_border:                        2px solid;
+
+
+//btns-color
+
+//btn-primary
+$btn_background_primary:                        #111B47;
+$btn_color_primary:                             $white;
+$btn_border_primary:                            $btn_background_primary;
+//btn-primary-hover
+$btn_hover_background_primary:                  transparent;//
+$btn_hover_border_primary:                      #091133;
+$btn_hover_color_primary:                       #091133;
+//btn-primary-active
+$btn_active_background_primary:                 transparent;//
+$btn_active_border_primary:                     $black;
+$btn_active_color_primary:                      $black;
+
+//btn-transparent
+$btn_background_transparent:                    transparent;
+$btn_color_transparent:                         #091133;
+$btn_border_transparent:                        #091133;
+//btn-transparent-hover
+$btn_hover_background_transparent:              #111B47;
+$btn_hover_border_transparent:                  #111B47;
+$btn_hover_color_transparent:                   $white;
+//btn-transparent-active
+$btn_active_background_transparent:             $black;
+$btn_active_border_transparent:                 $black;
+$btn_active_color_transparent:                  $white;
+
+
+
+
+// Forms
+$input_font_size:                   $font_size_base; 
+$input_line_height:                 $input_font_size  + 2; 
+$input_font_family:                 $base_font;
+$input_padding_vertical:            9px;
+$input_padding_horizontal:          20px; 
+$input_padding:                     $input_padding_vertical $input_padding_horizontal;
+$input_border_width:                1px;
+$input_border:                      $input_border_width solid $black;
+$input_border_radius:               0; 
+$input_height:                      (2 * ($input_border_width + $input_padding_vertical) + $input_line_height); 
+//submit
+$submit_background:                 #111B47;
+$submit_color:                      $white;
+$submit_height:                     $input_height;
+$submit_border:                     $btn_border;
+$submit_padding:                    0 24px;
+$submit_font_size:                  $input_font_size;
+$submit_line_height:                $input_line_height;
+// submit hover
+$submit_hover_background:           darken($submit_background, 12%);
+$submit_hover_color:                $white; 
+//focus
+$input_focus_border_color:          $black; 
+//placeholder
+$placeholder_color:                 $primary;
+// select
+$select_height:                     $input_height;
+$select_border:                     $input_border;
+$select_border_radius:              $input_border_radius;
+$select_padding:                    $input_padding;
+$select_font_size:                  $input_font_size;
+$select_line_height:                $input_line_height;
+
+// animation speed
+$animation_speed:                     0.25s;
+$base_duration:                       0.75s;
+
+
+
+
+

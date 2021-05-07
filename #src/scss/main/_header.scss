@@ -1,0 +1,26 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	padding: rem-calc(11 0);
+	background: yellow;
+	border-bottom: 2px solid red;
+	transition: all 0.35s ease-in-out;
+	@include display-flex;
+	@include align-items(center);
+	
+}

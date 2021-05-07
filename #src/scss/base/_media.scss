@@ -1,0 +1,59 @@
+////media
+// Usage
+// p {
+// 	font-size: 16px;
+// 	@include max-screen($widescreen) {
+	// 	font-size: 10px;
+	// }
+// 	@include min-screen($widescreen) {
+	// 	font-size: 10px;
+	// }
+
+$mobile: 480px;
+$phone: 600px;
+$tablet: 768px;
+$desktop: 1024px;
+$widescreen: 1400px;
+
+@mixin max-screen($screen_width) {
+	@media (max-width: #{$screen_width - 1px}) {
+		@content;
+  }
+}
+@mixin min-screen($screen_width) {
+	@media (min-width: #{$screen_width + 1px}) {
+		@content;
+  }
+}
+
+//or
+
+// @mixin mobile {
+// 	@media (min-width: #{$mobile_width}) and (max-width: #{$phone_width - 1px}) {
+// 		@content;
+//   }
+// }
+
+// @mixin phone {
+// 	@media (min-width: #{$phone_width}) and (max-width: #{$tablet_width - 1px}) {
+// 		@content;
+// 	}
+// }
+
+// @mixin tablet {
+// 	@media (min-width: #{$tablet_width}) and (max-width: #{$desktop_width - 1px}) {
+// 		@content;
+// 	}
+// }
+
+// @mixin desktop {
+// 	@media (min-width: #{$desktop_width}) and (max-width: #{$widescreen_width - 1px}) {
+// 		@content;
+// 	}
+// }
+
+// @mixin widescreen {
+// 	@media (min-width: #{$widescreen_width + 1px}) {
+// 		@content;
+// 	}
+// }

@@ -1,0 +1,13 @@
+{
+    "name": "pets",
+    "description": "gulp template",
+    "main": "index.html",
+    "authors": ["Slavichek"],
+    "license": "ISC",
+    "homepage": "",
+    "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+    "dependencies": {
+        "jquery": "^3.5.1",
+        "owl.carousel": "^2.3.4"
+    }
+}
